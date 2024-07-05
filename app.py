@@ -11,9 +11,6 @@ data_atual = datetime.today()
 dia_amanha_str = data_atual + timedelta(1)
 dia_amanha = dia_amanha_str.date()
 
-with open('comandos.json', 'r') as jsonread:
-    comando = json.load(jsonread)
-
 @app.route('/webhook', methods=['POST'])
 def webhook():
     message = request.json
